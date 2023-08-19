@@ -45,7 +45,7 @@ def SaveVectorDB(string1, string2):
     
     return vectorstore
 
-def GetVerctorDB(input_string, vectorstore):
+def GetVectorDB(input_string, vectorstore):
     # Convert the input string into embeddings
     embeddings = OpenAIEmbeddings()
     input_embedding = embeddings.embed(input_string)
