@@ -12,7 +12,7 @@ import CreateProject as CP
 
 
 def main():
-    CP.create_project()
+    CP.FinTune_create_project()
 #    gen_subfolders("Make python helloworld program")
  
 
