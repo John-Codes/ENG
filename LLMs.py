@@ -17,15 +17,23 @@ def Call(projectDescription, LLMName="ChatGPT"):
 
 
 def CallChatGPT( projectDescription):
-    
-    response = openai.Completion.create(
-    model="text-davinci-003",
-    prompt=projectDescription,
-    temperature=0.6,
-    max_tokens=3000,
-    )
-    print(response.choices[0].text.strip())
-    return response
+    try:
+        response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+            messages = [
+        {
+        "role": "user",
+        "content": f"{projectDescription}",
+        }
+        ],
+        temperature=0.6,
+        max_tokens=3000,
+        )
+      # Extract the GPT response string
+        gpt_response_string = response['choices'][0]['message']['content']
+        return gpt_response_string
+    except Exception as e:
+        print(e.message)
 
 def CallPalm2( projectDescription):
     

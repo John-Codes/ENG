@@ -4,6 +4,7 @@ import LLMs as LLM
 import VectorDB as M
 from getpass import getpass
 import CreateProject as CP
+import traceback
 
 
 

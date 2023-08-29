@@ -1,0 +1,1 @@
+{"topics": {"ClassName{UserClassName}": {"MethodNameread_and_print_file": {"description": "def print_file_content(file_path):\n    with open(file_path, 'r') as file:\n        content = file.read()\n    print(content)"}}}}
